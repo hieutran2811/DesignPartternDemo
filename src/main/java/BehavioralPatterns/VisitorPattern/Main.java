@@ -9,11 +9,14 @@ public class Main {
         };
 
         AreaCalculator areaCalculator = new AreaCalculator();
+        PerimeterCalculator perimeterCalculator = new PerimeterCalculator();
 
         for (Shape shape : shapes) {
             shape.accept(areaCalculator); // Tính toán diện tích cho từng hình
+            shape.accept(perimeterCalculator); // Tính toán diện tích cho từng hình
         }
 
         System.out.println("Total Area: " + areaCalculator.getTotalArea());
+        System.out.println("Total Area: " + perimeterCalculator.getPerimeter());
     }
 }
